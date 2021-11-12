@@ -1,25 +1,48 @@
-import logo from './logo.svg';
+import React, { useState} from 'react';
 import './App.css';
+import Context from './components/Context/Context';
+import FormTodo from './components/FormTodo';
+
 
 function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+    const [todo, setTodo] = useState([
+        {
+            id: 1,
+            title: 'first',
+            completed: 'added'
+        },
+        {
+            id: 2,
+            title: 'second',
+            completed: 'added'
+        },
+        {
+            id: 3,
+            title: 'third',
+            completed: 'added'
+        },
+    ]);
+    const [addTodo, setAddTodo] = useState(false);
+
+    const handleAddTodo = () => {
+        setAddTodo(true);
+    }
+
+    let value = {
+        todo,
+        handleAddTodo,
+        addTodo,
+        todo,
+        setTodo,
+    }
+
+
+    return (
+        <Context.Provider value={{handleAddTodo, addTodo, todo, setTodo}}>
+            <FormTodo />
+        </Context.Provider>
+
+    );
 }
 
 export default App;

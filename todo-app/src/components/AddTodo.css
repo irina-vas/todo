@@ -1,0 +1,90 @@
+.wrapper {
+  background-color:  #cde8d8;
+  width: 100%;
+  height: 50vw;
+  display: flex;
+  justify-content: space-between;
+
+}
+
+.todos_nonSelected, .todos_inProgress, .todos_done {
+  background-color: #9ac4ab;
+  width: 30%;
+  padding: 20px;
+  box-sizing: border-box;
+
+}
+
+.todo_item {
+  margin-bottom: 5px;
+}
+
+.todo_item_wrapper {
+  background-color: #2b594a;
+  border: 1px solid #537f65;
+  margin-bottom: 10px;
+  padding: 10px;
+  border-radius: 10px;
+  box-sizing: border-box;
+  box-shadow: 0px 1px 8px 0px rgba(50, 92, 81, 0.2);
+  color: #fff;
+  display: flex;
+  justify-content: space-between;
+}
+
+.todo_item_wrapper > div {
+  display: flex;
+  justify-content: space-between;
+}
+
+.todo_delete {
+  width: 60px;
+  height: 30px;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #781410;
+  border: none;
+  color: #fff;border-radius: 10px;
+
+}
+
+.todo_delete > span {
+  font-size: 10px;
+}
+
+.wrapper h2 {
+  color: #0d291e;
+  text-align: center;
+
+}
+
+.select_todo {
+  margin-right: 10px;
+  border: none;
+  opacity: 0.7;
+  border-radius: 10px;
+  padding: 5px;
+  box-sizing: border-box;
+}
+.input_wrapper {
+  width: 100%;
+  display: flex;
+
+}
+
+.input_todo {
+  width: 100%;
+  border: none;
+  height: 35px;
+  padding: 5px;
+  border-radius: 10px 0 0 10px
+}
+
+.button_todo {
+  display: block;
+  border: none;
+  border-radius: 0 10px 10px 0;
+  width: 30%
+}
