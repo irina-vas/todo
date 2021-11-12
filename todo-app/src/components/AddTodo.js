@@ -9,15 +9,11 @@ const AddTodo = () => {
     const {setTodo} = useContext(Context);
     const {todo} = useContext(Context);
 
-    // const deleteTodo = (id) => {
-    //     let newTodo = [...todo].filter(item => item.id != id);
-    //     setTodo(newTodo)
-    // }
 
     const saveTodo = () => {
         setTodo(
             [...todo, {
-                id: uuid.v4,
+                id: Math.floor((Math.random() * 100)+1),
                 title: value,
                 completed: 'added'
                 }
